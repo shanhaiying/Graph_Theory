@@ -44,11 +44,35 @@ We will generaly be representing these graphs both symbolically as well as in th
 
 \noindent The figure above is also called a graph and is the plane representation of $G =(V,E)$. We can write out G symbolically as in the definition as follows:\\
 $V(G) = \{x,y,v,w\}$ and $E(G) = \{(x,y),(y,v), (v,w),(w,x)\}$, note that the ordered pair $(x,y) = (y,x)$, and thus its repitition in the set $E(G)$ is redundant and left out.\\\\
-\textbf{Definition:} Let $G$ be a graph, it is customary to denote an edge $(u,v)$ simply as $uv$. If $uv$ is an edge of $G$ then $u$ and $v$ are said to be \textbf{adjacent} in $G$. Moreover the number of vertices in $G$ is the \textbf{order} of $G$ (\textit{i.e} $|V(G)|$ is the order of G). Similarly the number of edges is its \textbf{size}.
-
-
-
-
+\textbf{Definition:} Let $G$ be a graph, it is customary to denote an edge $(u,v)$ simply as $uv$. If $uv$ is an edge of $G$ then $u$ and $v$ are said to be \textbf{adjacent} in $G$. Moreover the number of vertices in $G$ is the \textbf{order} of $G$ (\textit{i.e} $|V(G)|$ is the order of G). Similarly the number of edges is its \textbf{size}.\\\\
+\textbf{Definition:} Let $G=(V,E)$ be a graph if $e=uv$ is an edge of $G$ then the vertices $u$ and $v$ are said to be \textbf{joined} by the edge $e$. Morever the vertices $u$ and $v$ are said to be \textbf{neighbors} of each other.\\\\
+Let us detail an example using the definitions we have learned thus far.\\\\
+\\\\\\\\\\
+\textbf{\textit{Example 1.}}\\
+\[\begin{tikzpicture}
+	%% the vertices
+	\vertex (a) at (2,0) [label=below:$a$] {};
+	\vertex (b) at (1,1) [label=above:$b$] {};
+	\vertex (c) at (2.5,2) [label=above:$c$] {};
+	\vertex (d) at (4,1) [label=above:$d$] {};
+	\vertex (e) at (3,0) [label=below:$e$] {};			
+	%% for the edges
+	\path
+		(a) edge (d)
+		(d) edge (b)
+		(b) edge (a)
+		(a) edge (c)
+		(b) edge (c)
+		(a) edge (e)
+		(e) edge (d)
+		(d) edge (c)
+		(c) edge (e)
+		(e) edge (b)
+		;
+		
+\end{tikzpicture}\]
+\begin{center}\textit{Graph G (Figure 1.2)}\end{center}
+First we have the order of $G$ defined by $|V(G)|$ is 5. Moreoever its size is 10, given by the number of edges in the graph. We can also explicitely write out the sets $V$ and $E$.
 
 
 
