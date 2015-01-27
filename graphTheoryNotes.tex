@@ -73,10 +73,45 @@ Let us detail an example using the definitions we have learned thus far.\\\\
 \end{tikzpicture}\]
 \begin{center}\textit{Graph G (Figure 1.2)}\end{center}
 First we have the order of $G$ defined by $|V(G)|$ is 5. Moreoever its size is 10, given by the number of edges in the graph. We can also explicitely write out the sets $V$ and $E$.
-
-
-
-
+\\\\
+\textbf{Definition:} We say a graph $H$ is a \textbf{subgraph} of $G$, denoted $H\subseteq G$, if we have that $V(H)\subseteq V(G)$ and $E(H) \subseteq E(G)$. If we have that $H\subseteq G$ and either $V(H)$ is a proper subset of $V(G)$ or $E(H)$ is a proper subset of $E(G)$ then we say $H$ is a \textbf{proper subgraph} of $G$.\\\\
+Let us take a look at an example depicting this definition.
+\[\begin{tikzpicture}
+	%% the vertices for graph G
+	\vertex (a) at (2,0) [label=below:$a$] {};
+	\vertex (b) at (1,1) [label=above:$b$] {};
+	\vertex (c) at (2.5,2) [label=above:$c$] {};
+	\vertex (d) at (4,1) [label=above:$d$] {};
+	\vertex (e) at (3,0) [label=below:$e$] {};			
+	%% for the edges
+	\path
+		(a) edge (b)
+		(b) edge (c)
+		(c) edge (d)
+		(d) edge (e)
+		(e) edge (a)
+		;
+\end{tikzpicture}\]
+\begin{center}\textit{Graph G}\end{center}
+Then we have that 
+\[\begin{tikzpicture}
+	%% the vertices for graph G
+	
+	\vertex (b) at (1,1) [label=above:$b$] {};
+	\vertex (c) at (2.5,2) [label=above:$c$] {};
+	\vertex (d) at (4,1) [label=above:$d$] {};
+	%% for the edges
+	\path
+		(b) edge (c)
+		(c) edge (d)
+		
+		;
+\end{tikzpicture}\]
+\begin{center}
+\textit{Graph H}\\
+\end{center}
+is a subgraph of G, $H\subseteq G$\\\\
+\textbf{Definition:} A subgraph $F$ of $G$ is called an \textbf{induced subgraph} of $G$ if whenever $u$ and $v$ are vertices of $F$ and $uv$ is an edge of $G$
 
 
 
